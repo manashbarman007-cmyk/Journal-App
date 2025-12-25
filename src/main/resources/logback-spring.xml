@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Console Appender -->
+    <appender name="myConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{36}) - %msg%n</pattern> <!-- cyan is a colour -->
+        </encoder>
+    </appender>
+
+    <!-- Rolling File Appender -->
+    <appender name="myFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./logs/application.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- keep 30 days of history, or whatever you want -->           
+            <fileNamePattern>./logs/application-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- keep 30 days of history, or whatever you want  and a max size of 10MB, or whatever you want-->
+            <maxHistory>30</maxHistory>
+	        <maxFileSize>10MB</maxFileSize>   
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root Logger Configuration -->
+    <root level="INFO">
+        <appender-ref ref="myConsoleAppender" />
+        <appender-ref ref="myFileAppender" />
+    </root>
+
+    <!-- Specific Logger for a package -->
+    <logger name="in.sp.main.config" level="DEBUG" additivity="false"> <!--  additivity="false" means it won’t inherit 
+                                                                            appenders from the root logger.  -->  
+        <appender-ref ref="myConsoleAppender" />
+    </logger>
+
+</configuration>
