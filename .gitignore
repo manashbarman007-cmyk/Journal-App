@@ -35,4 +35,4 @@ build/
 ### Environments ###
 .env
 
-log
+log/
