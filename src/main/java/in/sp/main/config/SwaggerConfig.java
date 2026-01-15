@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.servers.Server;
 import io.swagger.v3.oas.models.tags.Tag;
@@ -34,7 +33,7 @@ public class SwaggerConfig {
 						new Tag().name("Journal API"),
 						new Tag().name("Authenticated User API"),
 						new Tag().name("Admin API")))
-				.addSecurityItem(new SecurityRequirement().addList(securitySchemeName))//This method adds a security requirement to your OpenAPI spec.
+//				.addSecurityItem(new SecurityRequirement().addList(securitySchemeName))//This method adds a global security (i.e to all end points) requirement to your OpenAPI spec.
 			                                                                           //It tells Swagger UI that certain endpoints require authentication 
 				                                                                       //and enables the Authorize button.				
 			                                                                           //This part basically authenticates endpoints to accept JWT token.					
