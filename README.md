@@ -13,8 +13,8 @@ JournalApp is a Spring Boot application that integrates with MongoDB, Redis, Kaf
 - **Kafka Messaging**: Enables asynchronous communication using Kafka.
 - **Google OAuth2 Authentication**: Allows secure login with Google accounts.
 - **Swagger UI**: Interactive API documentation and testing.
-- **Prometheus Monitoring**: Application metrics collection
-- **Grafana Dashboards**: Metrics visualization 
+- **Prometheus Monitoring**: Application metrics collection.
+- **Grafana Dashboards**: Metrics visualization .
 - **Logback Logging**: Centralized and configurable logging framework.
 
 ---
