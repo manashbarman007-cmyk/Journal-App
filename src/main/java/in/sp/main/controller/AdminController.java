@@ -15,12 +15,14 @@ import in.sp.main.dto.UserDTO;
 import in.sp.main.entity.User;
 import in.sp.main.service.UserServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 //Here, we will create all the "admin" end points (Eg: to get all users) 
 @RestController
 @RequestMapping("/admin")
 @Tag(name = "Admin API", description = "api endpoints are accessible only to the admins")
+@SecurityRequirement(name = "bearerAuth") // this will secure all the APIs in this controller
 public class AdminController {
 	
 	
