@@ -22,7 +22,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @RequestMapping("/admin")
 @Tag(name = "Admin API", description = "api endpoints are accessible only to the admins")
-@SecurityRequirement(name = "bearerAuth") // this will secure all the APIs in this controller
+@SecurityRequirement(name = "bearerAuth") // this will document in swagger that all the APIs in this controller are secured
 public class AdminController {
 	
 	
