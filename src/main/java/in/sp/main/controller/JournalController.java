@@ -21,12 +21,14 @@ import in.sp.main.entity.User;
 import in.sp.main.repository.UserRepo;
 import in.sp.main.service.JournalAppServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 
 @RestController // @ResposnseBody + @Controller
 @RequestMapping("/journals") // this controller will handle all API requests with end point "/journals" 
 @Tag(name = "Journal API", description = "CRUD operations in journals for authenticated user")
+@SecurityRequirement(name = "bearerAuth") // this will document in swagger that all the APIs in this controller are secured
 public class JournalController {
 	
 	@Autowired
