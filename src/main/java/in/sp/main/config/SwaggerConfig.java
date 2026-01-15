@@ -25,12 +25,11 @@ public class SwaggerConfig {
 				.title("Journal App API")
 				.description("An API for the Journal App")
 				)
-				.servers(List.of(new Server().url("http://localhost:8080").description("local server"), //The servers object lets you specify one or more base URLs for your API.
+				.servers(List.of(new Server().url("http://localhost:8080").description("local server"))) //The servers object lets you specify one or more base URLs for your API.
 						                                                                                //Each endpoint (like /users, /orders) is appended to this base URL
 						                                                                                //to form the full request path.
 						                           //In Swagger UI, these will show up in a dropdown so users can choose which environment to interact with.
 
-						         new Server().url("http://localhost:8081").description("live server")))
 				.tags(List.of(new Tag().name("Public API"),  //  used to group and describe API endpoints under a common label in the generated documentation.
 						new Tag().name("Journal API"),
 						new Tag().name("Authenticated User API"),
@@ -51,3 +50,4 @@ public class SwaggerConfig {
 	                        .bearerFormat("JWT")));
 	}
 }
+
