@@ -22,12 +22,13 @@ import in.sp.main.service.WeatherApiResponse;
 import in.sp.main.weatherresponse.WeatherResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 //Here, we will create all the authenticated end points for user(Eg: User update and such) 
 @RestController
 @RequestMapping("/users")
 @Tag(name = "Authenticated User API", description = "Only authenticated user can access this api")
+@SecurityRequirement(name = "bearerAuth") // this will document in swagger that all the APIs in this controller are secured
 public class UserAuthenticatedController {
 	
 	
