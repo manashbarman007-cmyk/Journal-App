@@ -13,6 +13,8 @@ JournalApp is a Spring Boot application that integrates with MongoDB, Redis, Kaf
 - **Kafka Messaging**: Enables asynchronous communication using Kafka.
 - **Google OAuth2 Authentication**: Allows secure login with Google accounts.
 - **Swagger UI**: Interactive API documentation and testing.
+- **Prometheus Monitoring**: Application metrics collection
+- **Grafana Dashboards**: Metrics visualization 
 - **Logback Logging**: Centralized and configurable logging framework.
 
 ---
@@ -77,6 +79,26 @@ To start the application and its dependencies using Docker Compose, run:
 ```bash
 docker-compose up --build
 ```
+---
+
+## 🔐 Grafana Credentials
+
+```
+username : admin
+pasword : admin
+```
+
+---
+
+## 🌐 Service Access Links (Host Machine)
+
+| Service  | URL | 
+|----------|----------|
+| Journal App | http://localhost:8080 | 
+| Prometheus  | http://localhost:9090  |
+| Grafana | http://localhost:3000 |
+| Swagger UI | http://localhost:8080/swagger-ui/index.html |
+
 ---
 
 ## 👨‍💻 Author
