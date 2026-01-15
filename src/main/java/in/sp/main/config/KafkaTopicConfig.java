@@ -17,7 +17,7 @@ public class KafkaTopicConfig {
 	public KafkaAdmin kafkaAdmin() {
 		Map<String, Object> config = new HashMap<>();
 		
-		config.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+		config.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka:9092");
 		return new KafkaAdmin(config);
 	}
 	
