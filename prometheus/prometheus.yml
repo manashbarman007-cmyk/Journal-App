@@ -6,4 +6,4 @@ scrape_configs:
   - job_name: "journal-app"
     metrics_path: /actuator/prometheus
     static_configs:
-      - targets: ["journal-app:8080"]
+      - targets: ["app:8080"]
