@@ -33,7 +33,7 @@ public class KafkaConsumerConfig {
 	public ConcurrentKafkaListenerContainerFactory<String, String> concurrentKafkaListenerContainerFactory() {
 		ConcurrentKafkaListenerContainerFactory<String, String> cFactory = new ConcurrentKafkaListenerContainerFactory<>();
 		cFactory.setConsumerFactory(consumerFactory());
-		cFactory.setConcurrency(6); // will create 6 consumer threads for parallel processing
+		cFactory.setConcurrency(6); // will create 6 consumer threads in the consumer group "my-group" for parallel processing
 		cFactory.getContainerProperties().setPollTimeout(45000); // consumer will check for messages from producer in every 45 seconds interval
 		
 		return cFactory;
